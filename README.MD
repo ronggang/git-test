@@ -30,6 +30,8 @@ git commit -m "添加一个说明文件"
 当使用 git commit 命令时，是将“暂存区”内容提交至仓库；那么 git add 的作用就是将需要的文件添加至“暂存区”，有人将“暂存区”比喻成“购物车”，相当的形象！
 
 ## 第三步 创建分支
+通常情况下，git 创建的仓库会有一个默认分支：master，一般的操作都在这个分支下进行；
+但平时需要添加功能或需要对一个成熟功能进行升级时，需要创建一个分支来进行操作；
 可使用以下命令快速创建并切换到一个分支
 ```
 git checkout -b dev
@@ -39,3 +41,12 @@ git checkout -b dev
 git branch dev
 git checkout dev
 ```
+可使用 git branch 命令查看当前正在使用的分支
+
+## 第四步 合并分支
+当在分支下内容修改完成后，可以将当前内容合并到主分支（master）
+```
+git checkout master
+git merge dev
+```
+在进行合并操作时，需要先切换到 master 分支，再进行合并操作
