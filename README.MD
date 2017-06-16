@@ -13,3 +13,15 @@ git init
 Initialized empty Git repository in G:/git-test/.git/
 ```
 说明已经创建一个空的“仓库”，现在就可以开始使用了。
+
+## 第二步 添加文件和提交
+当文件修改完成后，需要进行两个步骤
+1. 添加文件
+```
+git add README.MD
+```
+2. 提交当前修改
+```
+git commit -m "添加一个说明文件"
+```
+不管是新增文件和修改文件内容，都被视为“修改”。
