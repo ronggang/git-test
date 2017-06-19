@@ -76,3 +76,11 @@ git stash list
 ```
 git stash pop
 ```
+## 六 BUG管理
+可以通过创建临时分支的办法来对BUG进行修复和管理，解决完BUG后，提交合并，然后删除临时分支。
+
+```
+git checkout master
+git merge --no-ff -m "合并已修复的BUG #1" issue-1
+git branch -d issue-1
+```
