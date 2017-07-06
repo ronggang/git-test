@@ -122,6 +122,15 @@ git push origin v1.0
 git push origin :refs/tags/v0.9
 ```
 
+## 高级应用
+1. cherry-pick
+可以将某一个 commit 合并到当前分支，如
+```
+git checkout dev
+git cherry-pick 123456 # 假设 123456 为 master 下的一个commit
+```
+进行以上操作后，commit 123456 的内容将会合并到 dev 分支，并生成一个新的提交
+
 ## 完结
 掌握以上内容后，基本可以使用 git 对源码进行管理，更多有用的功能，请移步 [廖雪峰的Git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
