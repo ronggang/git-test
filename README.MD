@@ -131,6 +131,16 @@ git cherry-pick 123456 # 假设 123456 为 master 下的一个commit
 ```
 进行以上操作后，commit 123456 的内容将会合并到 dev 分支，并生成一个新的提交
 
+2. 检出指定分支下的某个文件或某个目录下所有文件
+```
+git checkout 分支名称 -- "目录名称/文件名称"
+```
+如：
+```
+git checkout master -- "path1/*"
+git checkout dev -- "path 2/file.name"
+```
+目录之所以用引号，是因为目录中如果包含空格的话用引号不会出错。
 ## 完结
 掌握以上内容后，基本可以使用 git 对源码进行管理，更多有用的功能，请移步 [廖雪峰的Git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
