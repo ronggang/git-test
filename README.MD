@@ -141,6 +141,14 @@ git checkout master -- "path1/*"
 git checkout dev -- "path 2/file.name"
 ```
 目录之所以用引号，是因为目录中如果包含空格的话用引号不会出错。
+
+3. 以服务器内容强制覆盖本地内容
+```
+git fetch --all
+git reset --hard origin/master
+git pull origin master --allow-unrelated-histories
+```
+`--allow-unrelated-histories` 参数可避免因为删除了历史记录中的一些没用的文件后无法合并的错误，提示为：`fatal: refusing to merge unrelated histories`
 ## 完结
 掌握以上内容后，基本可以使用 git 对源码进行管理，更多有用的功能，请移步 [廖雪峰的Git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
