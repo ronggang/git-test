@@ -153,3 +153,4 @@ git pull origin master --allow-unrelated-histories
 掌握以上内容后，基本可以使用 git 对源码进行管理，更多有用的功能，请移步 [廖雪峰的Git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
 完。
+##感谢 commit只是为了练习 写的很好
