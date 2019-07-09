@@ -2,7 +2,7 @@
 name: Bug report
 about: 发起一个Bug反馈
 title: ''
-labels: ''
+labels: bug
 assignees: ''
 
 ---
