@@ -149,6 +149,23 @@ git reset --hard origin/master
 git pull origin master --allow-unrelated-histories
 ```
 `--allow-unrelated-histories` 参数可避免因为删除了历史记录中的一些没用的文件后无法合并的错误，提示为：`fatal: refusing to merge unrelated histories`
+
+4. 合并某个分支多次提交的内容到当前分支
+- 使用场景：
+  - 当需要进行一系列实验性操作；
+  - 该操作可能需要多次提交来进行测试；
+  - 实验成功后，不想在主线中保留一串的提交记录；
+
+- 操作步骤：
+  - 创建新的分支，如：`git checkout -d feature-1` ；
+  - 在 `feature-1` 分支下进行实验并多次提交；
+  - 完成实验，准备合并到开发主分支；
+  - 切换到主分支，如：`git checkout dev`
+  - 将实验内容合并：`git merge --squash feature-1` ；
+  - 此时会将 `feature-1` 里所有的修改暂存到当前分支下；
+  - 填写 `commit` 内容后即可提交到当前分支；
+  - 删除 `feature-1` 分支：`git branch -d feature-1`
+
 ## 完结
 掌握以上内容后，基本可以使用 git 对源码进行管理，更多有用的功能，请移步 [廖雪峰的Git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
