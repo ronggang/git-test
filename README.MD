@@ -157,7 +157,7 @@ git pull origin master --allow-unrelated-histories
   - 实验成功后，不想在主线中保留一串的提交记录；
 
 - 操作步骤：
-  - 创建新的分支，如：`git checkout -d feature-1` ；
+  - 创建新的分支，如：`git checkout -b feature-1` ；
   - 在 `feature-1` 分支下进行实验并多次提交；
   - 完成实验，准备合并到开发主分支；
   - 切换到主分支，如：`git checkout dev`
